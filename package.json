@@ -1,0 +1,27 @@
+{
+  "name": "trader-maths-trainer",
+  "productName": "Trader Maths Trainer",
+  "version": "0.1.0",
+  "description": "Mental maths, probability and market-making practice for trading interviews.",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "test": "node test/selftest.js",
+    "smoke": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.tradermaths",
+    "productName": "Trader Maths Trainer",
+    "files": ["main.js", "preload.js", "src/**/*", "renderer/**/*"],
+    "directories": { "output": "dist" },
+    "win": { "target": ["nsis", "portable"] },
+    "mac": { "target": ["dmg"], "category": "public.app-category.education" },
+    "linux": { "target": ["AppImage", "deb"], "category": "Education" }
+  },
+  "devDependencies": {
+    "electron": "^45.2.3",
+    "electron-builder": "^26.0.0"
+  }
+}
