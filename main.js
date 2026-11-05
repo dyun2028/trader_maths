@@ -97,6 +97,8 @@ function createWindow() {
   return win;
 }
 
+if (process.env.TRAINER_SMOKE) app.disableHardwareAcceleration(); // reliable screenshots in test runs
+
 app.whenReady().then(() => {
   const dir = process.env.TRAINER_DATA_DIR || app.getPath('userData');
   store = dbmod.makeStore(dbmod.open(path.join(dir, 'trainer.db')));

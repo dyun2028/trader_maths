@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:">
+  <title>Trader Maths Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <nav id="nav" aria-label="Main">
+      <div class="brand"><span class="brand-mark">Σ</span><span>Trader Maths</span></div>
+      <button class="nav-btn" data-nav="home">Topics</button>
+      <button class="nav-btn" data-nav="sprint">Sprint</button>
+      <button class="nav-btn" data-nav="review">Review <span id="review-badge" class="badge" hidden>0</span></button>
+      <button class="nav-btn" data-nav="stats">Stats</button>
+      <div class="nav-foot">Progress is saved on this computer.</div>
+    </nav>
+    <main id="view"></main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
